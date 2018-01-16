@@ -1,0 +1,27 @@
+<?php
+/**
+ * Copyright © 2016 Magento. All rights reserved.
+ * See COPYING.txt for license details.
+ */
+
+/**
+ * @var \Gene\ApplePay\Block\Shortcut\Button $block
+ */
+
+$id = $block->getContainerId() . mt_rand();
+
+$config = [
+    "Gene_ApplePay/js/implementations/shortcut" => [
+        'id' => $id,
+        'clientToken' => $block->getClientToken(),
+        'quoteId' => $block->getQuoteId(),
+        'displayName' => $block->getMerchantName(),
+        'actionSuccess' => $block->getActionSuccess(),
+        'grandTotalAmount' => $block->getAmount(),
+        'isLoggedIn' => $block->isCustomerLoggedIn(),
+        'storeCode' => $block->getStorecode()
+    ]  
+];
+
+?>
+<div id="<?php /* @noEscape */ echo $id; ?>" data-mage-init='<?php /* @noEscape */ echo json_encode($config); ?>'></div>

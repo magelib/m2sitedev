@@ -1,0 +1,72 @@
+<?xml version="1.0"?>
+
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Config:etc/system_file.xsd">
+
+    <system>
+
+        <!-- main tab -->
+
+        <tab id="m2epro_updater" translate="label" sortOrder="451">
+            <label>Multi Channels</label>
+        </tab>
+
+        <!-- installation \ upgrade tab -->
+
+        <section id="installation_upgrade" translate="label" type="text" sortOrder="50" showInDefault="1" showInWebsite="1" showInStore="1">
+            <class>separator-top</class>
+            <label>Installation</label>
+            <tab>m2epro_updater</tab>
+            <resource>Ess_M2eProUpdater::system_configuration</resource>
+
+            <group id="messages" translate="label" type="text" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
+                <frontend_model>Ess\M2eProUpdater\Block\Adminhtml\Configuration\Messages</frontend_model>
+            </group>
+            <group id="help_block" translate="label" type="text" sortOrder="20" showInDefault="1" showInWebsite="1" showInStore="1">
+                <frontend_model>Ess\M2eProUpdater\Block\Adminhtml\Configuration\Help</frontend_model>
+            </group>
+
+            <group id="information" translate="label" type="text" sortOrder="30" showInDefault="1" showInWebsite="1" showInStore="1">
+                <label>Information</label>
+                <frontend_model>Ess\M2eProUpdater\Block\Adminhtml\Configuration\Fieldset</frontend_model>
+                <field id="own_version" sortOrder="9" translate="label" type="label" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Own Version</label>
+                    <frontend_model>Ess\M2eProUpdater\Block\Adminhtml\Configuration\Field\OwnVersion</frontend_model>
+                </field>
+                <field id="current_version" sortOrder="10" translate="label" type="label" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Current Version</label>
+                    <frontend_model>Ess\M2eProUpdater\Block\Adminhtml\Configuration\Field\CurrentVersion</frontend_model>
+                </field>
+                <field id="latest_version" sortOrder="20" translate="label comment" type="label" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Latest Version</label>
+                    <frontend_model>Ess\M2eProUpdater\Block\Adminhtml\Configuration\Field\LatestVersion</frontend_model>
+                </field>
+            </group>
+
+            <group id="actions" translate="label" type="text" sortOrder="40" showInDefault="1" showInWebsite="1" showInStore="1">
+                <label>Actions</label>
+                <frontend_model>Ess\M2eProUpdater\Block\Adminhtml\Configuration\Fieldset\Actions</frontend_model>
+                <field id="schedule_upgrade" sortOrder="10" translate="label" type="button" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Schedule Upgrade</label>
+                    <frontend_model>Ess\M2eProUpdater\Block\Adminhtml\Configuration\Field\ScheduleUpgrade</frontend_model>
+                </field>
+                <field id="decline_upgrade" sortOrder="10" translate="label" type="button" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Decline Upgrade</label>
+                    <frontend_model>Ess\M2eProUpdater\Block\Adminhtml\Configuration\Field\DeclineUpgrade</frontend_model>
+                </field>
+            </group>
+
+            <group id="settings" translate="label" type="text" sortOrder="50" showInDefault="1" showInWebsite="1" showInStore="1">
+                <label>Settings</label>
+                <frontend_model>Ess\M2eProUpdater\Block\Adminhtml\Configuration\Fieldset</frontend_model>
+                <field id="notifications" sortOrder="10" translate="label" type="select" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Notify me</label>
+                    <frontend_model>Ess\M2eProUpdater\Block\Adminhtml\Configuration\Field\Notification</frontend_model>
+                </field>
+            </group>
+
+        </section>
+
+    </system>
+
+</config>

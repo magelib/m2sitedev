@@ -1,0 +1,13 @@
+<?php /** @var \Ess\M2eProUpdater\Block\Adminhtml\HelpBlock $block */ ?>
+
+<div
+    id="<?php echo $block->getHtmlId(); ?>"
+    class="m2epro_updater_block_notices m2epro-updater-box-style <?php echo $block->getClass(); ?>"
+    <?php if ($block->hasStyle()): ?>style="<?php echo $block->getStyle(); ?>"<?php endif; ?>
+>
+    <div class="bar"></div>
+
+    <div class="content" style="display: block;">
+        <?php echo $block->getContent(); ?>
+    </div>
+</div>

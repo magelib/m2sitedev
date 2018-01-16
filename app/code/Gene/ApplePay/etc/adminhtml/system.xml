@@ -1,0 +1,41 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Copyright © 2016 Magento. All rights reserved.
+ * See COPYING.txt for license details.
+ */
+-->
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Config:etc/system_file.xsd">
+    <system>
+        <section id="payment">
+            <group id="braintree_section">
+                <group id="braintree">
+                    <group id="gene_applepay" translate="label" showInDefault="1" showInWebsite="1" sortOrder="31">
+                        <label>ApplePay through Braintree (Provided by Gene Commerce)</label>
+                        <!--<comment><![CDATA[]]></comment>-->
+                        <frontend_model>Magento\Config\Block\System\Config\Form\Fieldset</frontend_model>
+                        <field id="active" translate="label" type="select" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="0">
+                            <label>Enable ApplePay through Braintree</label>
+                            <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                            <config_path>payment/gene_applepay/active</config_path>
+                        </field>
+                        <field id="merchant_name" translate="label" type="text" sortOrder="20" showInDefault="1" showInWebsite="1" showInStore="1">
+                            <label>Merchant Name</label>
+                            <config_path>payment/gene_applepay/merchant_name</config_path>
+                            <frontend_class>required-entry</frontend_class>
+                            <comment>
+                                <![CDATA[Displayed to the customer in the Apple Pay dialog.]]>
+                            </comment>
+                        </field>
+                        <field id="order_status" translate="label" type="select" sortOrder="30" showInDefault="1" showInWebsite="1" showInStore="0">
+                            <label>New Order Status</label>
+                            <source_model>Magento\Sales\Model\Config\Source\Order\Status</source_model>
+                            <config_path>payment/gene_applepay/order_status</config_path>
+                        </field>
+                    </group>
+                </group>
+            </group>
+
+        </section>
+    </system>
+</config>

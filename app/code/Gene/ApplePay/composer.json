@@ -1,0 +1,29 @@
+{
+  "name": "gene/module-applepay",
+  "description": "GENE Apple Pay provides support for the Apple Pay payment integration by Braintree Payments",
+  "require": {
+    "php": "~5.6.5|7.0.2|7.0.4|~7.0.6",
+    "magento/module-braintree": "^100.1.5"
+  },
+  "type": "magento2-module",
+  "version": "1.2.3",
+  "license": [
+    "Commerical"
+  ],
+  "autoload": {
+    "files": [
+      "registration.php"
+    ],
+    "psr-4": {
+      "Gene\\ApplePay\\": ""
+    }
+  },
+  "authors": [
+    {
+        "name": "Aidan Threadgold",
+        "email": "aidan@gene.co.uk",
+        "role": "Senior Developer",
+        "homepage": "https://applepay.gene.co.uk/"
+    }
+  ]
+}

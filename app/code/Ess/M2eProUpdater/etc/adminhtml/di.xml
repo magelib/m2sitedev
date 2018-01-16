@@ -1,0 +1,62 @@
+<?xml version="1.0"?>
+
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="urn:magento:framework:ObjectManager/etc/config.xsd">
+
+    <!-- config -->
+
+    <type name="Magento\Config\Controller\Adminhtml\System\Config\Edit">
+        <plugin name="m2epro_updater_plugin_config_magento_config_controller_adminhtml_system_config_edit"
+                type="Ess\M2eProUpdater\Plugin\Config\Magento\Config\Controller\Adminhtml\System\Config\Edit" />
+    </type>
+    <type name="Magento\Config\Model\Config">
+        <plugin name="m2epro_updater_plugin_config_magento_config_model_config"
+                type="Ess\M2eProUpdater\Plugin\Config\Magento\Config\Model\Config" />
+    </type>
+    <type name="Magento\Config\Model\Config\Structure\Data">
+        <plugin name="m2epro_updater_plugin_config_magento_config_model_config_structure_data"
+                type="Ess\M2eProUpdater\Plugin\Config\Magento\Config\Model\Config\Structure\Data"
+                sortOrder="999" />
+    </type>
+
+    <!-- front controller -->
+
+    <type name="Magento\Framework\App\FrontControllerInterface">
+        <plugin name="m2epro_updater_plugin_front_controller_notifications"
+                type="Ess\M2eProUpdater\Plugin\Front\Controller\Notifications"
+                sortOrder="999" />
+    </type>
+
+    <!-- session messages -->
+
+    <type name="Magento\Framework\View\Element\Message\Renderer\RenderersPool">
+        <arguments>
+            <argument name="renderers" xsi:type="array">
+                <item name="escape_renderer" xsi:type="object">Magento\Framework\View\Element\Message\Renderer\EscapeRenderer</item>
+                <item name="block_renderer" xsi:type="object">Magento\Framework\View\Element\Message\Renderer\BlockRenderer</item>
+                <item name="message_renderer" xsi:type="object">Ess\M2eProUpdater\Block\Adminhtml\Magento\Message\Renderer</item>
+            </argument>
+        </arguments>
+    </type>
+
+    <type name="Magento\Framework\View\Element\Message\MessageConfigurationsPool">
+        <arguments>
+            <argument name="configurationsMap" xsi:type="array">
+                <item name="m2epro_updater_message" xsi:type="array">
+                    <item name="renderer" xsi:type="const">Ess\M2eProUpdater\Block\Adminhtml\Magento\Message\Renderer::CODE</item>
+                </item>
+            </argument>
+        </arguments>
+    </type>
+
+    <!-- system notifications -->
+
+    <type name="Magento\Framework\Notification\MessageList">
+        <arguments>
+            <argument name="messages" xsi:type="array">
+                <item name="m2epro_updater_system_message" xsi:type="string">Ess\M2eProUpdater\Model\System\Message</item>
+            </argument>
+        </arguments>
+    </type>
+
+</config>

@@ -1,0 +1,18 @@
+.m2epro-updater-field-container label.label {
+    width: 35% !important;
+}
+.accordion .form-inline > .section-config.m2epro-updater-system-config-fieldset {
+    border-bottom: 0;
+}
+.accordion .config .value .control-value {
+    padding-top: 7px;
+}
+
+#row_installation_upgrade_information_current_version .control-value.special {
+    font-weight: bold;
+    color: red;
+}
+#row_installation_upgrade_information_latest_version .control-value.special {
+    font-weight: bold;
+    color: green;
+}

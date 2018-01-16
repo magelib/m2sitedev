@@ -1,0 +1,24 @@
+<?php $config = $block->getLikeButtonConfig(); ?>
+<?php if ($config["enabled"]) : ?>
+    <div style="margin-top:10px;">
+        <div id="fb-root"></div>
+        <script>(function(d, s, id) {
+          var js, fjs = d.getElementsByTagName(s)[0],
+              locale = '<?php echo $block->getButtonLocale() ?>',
+              appId = '<?php echo $block->getFacebookAppId() ?>';
+          if (d.getElementById(id)) return;
+          js = d.createElement(s); js.id = id;
+          js.src = "//connect.facebook.net/"+ locale +"/sdk.js#xfbml=1&version=v2.5&appId=" + appId;
+          fjs.parentNode.insertBefore(js, fjs);
+        }(document, 'script', 'facebook-jssdk'));</script>
+
+        <div class="fb-like"
+            data-href="<?php echo $block->getProductUrl() ?>"
+            data-layout="<?php echo $config['layout'] ?>"
+            data-action="<?php echo $config['action'] ?>"
+            data-colorscheme="<?php echo $config['colorscheme'] ?>"
+            data-share="<?php echo $config['share'] ?>"
+            data-show-faces="<?php echo $config['show_faces'] ?>">
+        </div>
+    </div>
+<?php endif ?>

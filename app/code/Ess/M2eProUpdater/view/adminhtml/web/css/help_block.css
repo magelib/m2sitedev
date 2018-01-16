@@ -1,0 +1,38 @@
+.main-col:not(:only-child) .ui-tabs-panel .field-row > .block_notices {
+    margin-top: -20px;
+}
+#container > .block_notices{
+    margin-bottom: 30px;
+}
+.m2epro-updater-box-style {
+    background-color: #f8f8f8 !important;
+    border-top: 1px solid #e3e3e3 !important;
+    border-bottom: 1px solid #e3e3e3 !important;
+}
+.m2epro_updater_block_notices {
+    font-size: 1.7rem;
+    padding: 1.8rem 2.5rem;
+    margin-bottom: 10px;
+}
+.m2epro_updater_block_notices p {
+    margin: 0 !important;
+}
+.m2epro_updater_block_notices .content {
+    font-size: 14px;
+    margin-top: -26px;
+    padding-right: 60px;
+    min-height: 26px;
+}
+.m2epro_updater_block_notices .bar {
+    min-height: 24px;
+    text-align: right;
+}
+.m2epro_updater_block_notices .content a {
+    text-decoration: underline;
+}
+.m2epro_updater_block_notices .content ul {
+    margin: 10px 0 10px 30px;
+}
+.m2epro_updater_block_notices .content ul:last-child {
+    margin-bottom: 0;
+}

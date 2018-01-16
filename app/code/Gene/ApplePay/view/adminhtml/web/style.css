@@ -1,0 +1,8 @@
+/**
+ * Override braintree styling to include apple pay logo
+ */
+.braintree-section .config-alt {
+    background: url("images/braintree_incapplepay.png") no-repeat scroll 0 0 / 100% auto;
+    height: 28px;
+    width: 289px;
+}

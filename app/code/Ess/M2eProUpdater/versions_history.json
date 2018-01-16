@@ -1,0 +1,38 @@
+{
+    "1.3.0": {
+        "versions": {
+            "setup": "1.0.0",
+            "files": "1.3.0"
+        },
+        "revisions": {
+            "svn": "33"
+        }
+    },
+    "1.2.0": {
+        "versions": {
+            "setup": "1.0.0",
+            "files": "1.2.0"
+        },
+        "revisions": {
+            "svn": "28"
+        }
+    },
+    "1.1.0": {
+        "versions": {
+            "setup": "1.0.0",
+            "files": "1.1.0"
+        },
+        "revisions": {
+            "svn": "17"
+        }
+    },
+    "1.0.0": {
+        "versions": {
+            "setup": "1.0.0",
+            "files": "1.0.0"
+        },
+        "revisions": {
+            "svn": "16"
+        }
+    }
+}
